@@ -1,34 +1,25 @@
-# Mantine Vite template
+# Rezept Mantine Playground
 
-## Features
+This is a quick [Storybook](https://storybook.js.org/) site to play around within [Mantine](https://mantine.dev/) for the design system for [Rezept](https://github.com/kad-products/rezept-core).
 
-This template comes with the following features:
+## Published Playground
 
-- [PostCSS](https://postcss.org/) with [mantine-postcss-preset](https://mantine.dev/styles/postcss-preset)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Storybook](https://storybook.js.org/)
-- [Vitest](https://vitest.dev/) setup with [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
-- ESLint setup with [eslint-config-mantine](https://github.com/mantinedev/eslint-config-mantine)
+Visit the published site at https://kad-products.github.io/rezept-mantine-playground/.  This is built by CI in GitHub Actions upon merge to `main`.
 
-## npm scripts
+## Development
 
-## Build and dev scripts
+1. Clone this site down
+2. Run `pnpm install` to install dependencies
+3. Run `pnpm dev` to run the storybook locally
+4. Visit `http://localhost:6006` to see the site
 
-- `dev` – start development server
-- `build` – build production version of the app
-- `preview` – locally preview production build
+Changes made should refresh the site automatically.
 
-### Testing scripts
+## Components
 
-- `typecheck` – checks TypeScript types
-- `lint` – runs ESLint
-- `prettier:check` – checks files with Prettier
-- `vitest` – runs vitest tests
-- `vitest:watch` – starts vitest watch
-- `test` – runs `vitest`, `prettier:check`, `lint` and `typecheck` scripts
+The files in `/src/*` are the components we are playing with.  Within each directory is a set of files that represents the componet:
 
-### Other scripts
-
-- `storybook` – starts storybook dev server
-- `storybook:build` – build production storybook bundle to `storybook-static`
-- `prettier:write` – formats all files with Prettier
+- `<component-name>.module.css` is the CSS module for that component
+- `<component-name>.story.tsx` is the Storybook file for that component defining how things should render on the Storybook site
+- `<component-name>.test.tsx` is unit tests for that component
+- `<component-name>.tsx` is the actual component
